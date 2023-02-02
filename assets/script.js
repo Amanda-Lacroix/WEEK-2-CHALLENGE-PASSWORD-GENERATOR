@@ -11,18 +11,25 @@ function writePassword() {
 
 }
 
-// we need a function to generate the password
+// we need a function to generate the password bsed on criteria
 function generatePassword (){
 // we need character options
 var charOptions ["ABCDEFGHIJKLMNOPQRSTUVWXYZ,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9, !#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"]
 
+// we need a prompt of the number of characters the user would like the password to be ( 8 to 128
+)
+// we need a prompt outlining the characters that will be used (upper/lower/special/number)
+// the input needs to be validated
+// the password needs to be displayed on the page
+
+return "password"
 
 }
 
 
 
 
-// we need a function to generate the password
+
 // WHEN all prompts are answered
 // THEN a password is generated that matches the selected criteria
 // WHEN the password is generated
