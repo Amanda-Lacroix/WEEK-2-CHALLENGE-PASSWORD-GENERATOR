@@ -16,17 +16,21 @@ function writePassword() {
 // var charOptions ["ABCDEFGHIJKLMNOPQRSTUVWXYZ,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9, !#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"]
 
 // we need a function to generate the password bsed on criteria
-function generatePassword (){
-console.log(its working);
+function generatePassword() {
+  console.log("works");
 
 // we need a prompt of the number of characters the user would like the password to be ( 8 to 128)
 
 
 // we need a prompt outlining the characters that will be used (upper/lower/special/number)
-// var charUsed = window.prompt("Passwords are to contain the following: Upper & Lower case, numbers and special characters");
-// if (!charUsed) {
-//   return;
-// }
+var charUsedUpper = window.confirm("Password will contain an Uppercase letter. Please click OK.");
+var charUsedLower = window.confirm("Password will contain an Uppercase letter. Please click OK.");
+var charUsedSpecial = window.confirm("Password will contain an Uppercase letter. Please click OK.");
+var charUsedNumber = window.confirm("Password will contain an Uppercase letter. Please click OK.");
+var promptCancel = [charUsedUpper,charUsedLower,charUsedSpecial,charUsedNumber]
+if (!promptCancel) {
+  return;
+}
 // the input needs to be validated
 // the password needs to be displayed on the page
 
