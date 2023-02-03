@@ -36,18 +36,6 @@ var charUsedNumber = window.confirm("Password will contain a Number. Please clic
   return generatePassword ();
   }
 
-  if (!charUsedLower) {
-    return generatePassword ();
-    }
-
-  if (!charUsedSpecial) {
-    return generatePassword ();
-    }
-
-  if (!charUsedNumber) {
-    return generatePassword ();
-    }
-    
 // the password needs to be displayed on the page
 for (var i=0; i <=charLength.valueOf; i++){
 var randomPass= Math.floor(Math.random() * charOptions.length);
