@@ -32,8 +32,9 @@ var charUsedLower = window.confirm("Password will contain a lowercase letter. Pl
 var charUsedSpecial = window.confirm("Password will contain a Special Character. Please click OK.");
 var charUsedNumber = window.confirm("Password will contain a Number. Please click OK.");
 
+// all characters must be included to proceed
   if (!charUsedUpper) {
-  return generatePassword ();
+  return generatePassword ()
   }
 
 // the password needs to be displayed on the page
