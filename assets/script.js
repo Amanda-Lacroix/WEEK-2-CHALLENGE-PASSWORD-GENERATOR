@@ -26,15 +26,11 @@ if (charLength < 8 || charLength > 128 ) {
   generatePassword()
 }
 
-else {
-
 // we need a prompt outlining the characters that will be used (upper/lower/special/number)
 var charUsedUpper = window.confirm("Password will contain an UPPERCASE letter. Please click OK.");
 var charUsedLower = window.confirm("Password will contain a lowercase letter. Please click OK.");
 var charUsedSpecial = window.confirm("Password will contain a Special Character. Please click OK.");
 var charUsedNumber = window.confirm("Password will contain a Number. Please click OK.");
-
-}
 
 // the input needs to be validated/if the user hits cancel on any prompt, the function need to start again
 
@@ -44,7 +40,7 @@ var charUsedNumber = window.confirm("Password will contain a Number. Please clic
 
 
 // the password needs to be displayed on the page
-for (var i=0; i <=charLength.value; i++){
+for (var i=0; i <=charLength.valueOf; i++){
 var randomPass= Math.floor(Math.random() * charOptions.length);
 }
 
