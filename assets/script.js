@@ -12,43 +12,45 @@ function writePassword() {
 
 }
 
-// we need character options that the computer can choose from
-// var charOptions ["ABCDEFGHIJKLMNOPQRSTUVWXYZ,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9, !#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"]
 
 // we need a function to generate the password bsed on criteria
 function generatePassword() {
-  console.log("works");
 
+// we need character options that the computer can choose from
+var charOptions = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"]
+var randomPass = []
 // we need a prompt of the number of characters the user would like the password to be ( 8 to 128)
+var charLength = window.prompt("Please enter how many characters you wish your password to be (must be between 8 to 128)");
+if (charLength < 8 || charLength > 128 ) {
+  window.alert ("Password must be 8 to 128 Characters.")
+  generatePassword()
+}
 
+else {
 
 // we need a prompt outlining the characters that will be used (upper/lower/special/number)
-var charUsedUpper = window.confirm("Password will contain an Uppercase letter. Please click OK.");
-var charUsedLower = window.confirm("Password will contain an Uppercase letter. Please click OK.");
-var charUsedSpecial = window.confirm("Password will contain an Uppercase letter. Please click OK.");
-var charUsedNumber = window.confirm("Password will contain an Uppercase letter. Please click OK.");
-var promptCancel = [charUsedUpper,charUsedLower,charUsedSpecial,charUsedNumber]
-if (!promptCancel) {
-  return;
+var charUsedUpper = window.confirm("Password will contain an UPPERCASE letter. Please click OK.");
+var charUsedLower = window.confirm("Password will contain a lowercase letter. Please click OK.");
+var charUsedSpecial = window.confirm("Password will contain a Special Character. Please click OK.");
+var charUsedNumber = window.confirm("Password will contain a Number. Please click OK.");
+
 }
-// the input needs to be validated
+
+// the input needs to be validated/if the user hits cancel on any prompt, the function need to start again
+
+  // if (!charUsedUpper) {
+  // return ("Start again, UPPERCASE is required");
+  // }
+
+
 // the password needs to be displayed on the page
-
-return "password"
-
+for (var i=0; i <=charLength.value; i++){
+var randomPass= Math.floor(Math.random() * charOptions.length);
 }
 
+return randomPass
 
-
-
-
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
-
-
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
