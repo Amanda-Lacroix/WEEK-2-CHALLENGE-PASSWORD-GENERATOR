@@ -32,13 +32,22 @@ var charUsedLower = window.confirm("Password will contain a lowercase letter. Pl
 var charUsedSpecial = window.confirm("Password will contain a Special Character. Please click OK.");
 var charUsedNumber = window.confirm("Password will contain a Number. Please click OK.");
 
-// the input needs to be validated/if the user hits cancel on any prompt, the function need to start again
+  if (!charUsedUpper) {
+  return generatePassword ();
+  }
 
-  // if (!charUsedUpper) {
-  // return ("Start again, UPPERCASE is required");
-  // }
+  if (!charUsedLower) {
+    return generatePassword ();
+    }
 
+  if (!charUsedSpecial) {
+    return generatePassword ();
+    }
 
+  if (!charUsedNumber) {
+    return generatePassword ();
+    }
+    
 // the password needs to be displayed on the page
 for (var i=0; i <=charLength.valueOf; i++){
 var randomPass= Math.floor(Math.random() * charOptions.length);
